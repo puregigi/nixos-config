@@ -1,0 +1,117 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    // $1 in nixos.txt = mauve, $2 = lavender.
+    "type": "file",
+    "source": "~/.config/fastfetch/nixos.txt",
+    "color": {
+      "1": "#cba6f7",
+      "2": "#b4befe"
+    }
+
+    // The cat (cat.txt is still installed by fastfetch.nix):
+    // "type": "file",
+    // "source": "~/.config/fastfetch/cat.txt",
+    // "color": { "1": "#b4befe" }
+  },
+  "display": {
+    "separator": " ",
+    "color": {
+      "keys": "#6e738d",
+      "separator": "#9198ab"
+    },
+    "size": {
+      "binaryPrefix": "si"
+    }
+  },
+  "modules": [
+    "break",
+    "break",
+    {
+      "type": "custom",
+      "format": "╭─ system ───────────────────────────────────────────╮"
+    },
+    {
+      "type": "title",
+      "key": " user",
+      "keyColor": "#c6a0f6",
+      "format": "{##b7bdf8}{user-name}{##6e738d}@{##b7bdf8}{host-name}"
+    },
+    {
+      "type": "os",
+      "key": "󱄅 os",
+      "keyColor": "#c6a0f6",
+      "format": "{name}"
+    },
+    {
+      "type": "uptime",
+      "key": "󰥔 uptime",
+      "keyColor": "#91d7e3",
+      "format": "{?days}{days}d {?}{hours}h {minutes}m"
+    },
+    {
+      "type": "custom",
+      "format": "├─ session ──────────────────────────────────────────"
+    },
+    {
+      "type": "shell",
+      "key": "󱆃 shell",
+      "keyColor": "#b7bdf8",
+      "format": "{pretty-name}"
+    },
+    {
+      "type": "terminal",
+      "key": " term",
+      "keyColor": "#b7bdf8",
+      "format": "{pretty-name}"
+    },
+    {
+      "type": "wm",
+      "key": "󰕮 wm",
+      "keyColor": "#c6a0f6",
+      "format": "{pretty-name}"
+    },
+    {
+      "type": "custom",
+      "format": "├─ hardware ─────────────────────────────────────────"
+    },
+    {
+      "type": "cpu",
+      "key": "󰍛 cpu",
+      "keyColor": "#b7bdf8",
+      "format": "{name:20}"
+    },
+    {
+      "type": "gpu",
+      "key": "󰘚 gpu",
+      "keyColor": "#b7bdf8",
+      "format": "{name:20}"
+    },
+    {
+      "type": "memory",
+      "key": "󰋊 memory",
+      "keyColor": "#7dc4e4",
+      "format": "{used} / {total}"
+    },
+    {
+      "type": "disk",
+      "key": "󰋊 disk",
+      "keyColor": "#7dc4e4",
+      "format": "{size-used} / {size-total}"
+    },
+    {
+      "type": "display",
+      "key": "󰍹 monitor",
+      "keyColor": "#91d7e3",
+      "format": "{width}x{height}{?refresh-rate} @ {refresh-rate}Hz{?}"
+    },
+    {
+      "type": "custom",
+      "format": "                \u001b[38;2;91;96;120m  \u001b[38;2;183;189;255m  \u001b[38;2;195;157;240m  \u001b[38;2;245;189;230m  \u001b[38;2;240;198;198m  \u001b[38;2;138;173;244m  \u001b[38;2;145;215;227m  \u001b[38;2;202;211;245m "
+    },
+    {
+      "type": "custom",
+      "format": "╰─end────────────────────────────────────────────────╯"
+    }
+  ]
+}
