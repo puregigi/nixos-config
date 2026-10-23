@@ -7,6 +7,16 @@
       p7zip
       pciutils
       evtest
+      poppler-utils
+      jq
+      nh
+      nvd
+      nil
     ];
+
+    programs.zoxide.enable = true;
+    programs.fzf.enable = true;
+    programs.eza.enable = true;
+    programs.bat.enable = true;
   };
 }
