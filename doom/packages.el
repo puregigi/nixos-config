@@ -10,3 +10,4 @@
 
 (package! catppuccin-theme)
 (package! kind-icon)
+(package! org-roam-ui)

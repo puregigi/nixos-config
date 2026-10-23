@@ -11,7 +11,6 @@
       org-directory "~/Documents/org/"
       projectile-project-search-path '("~/Projects/")
       +format-with-lsp nil)
-(setq org-roam-directory (file-truename "~/Documents/org/roam/"))
 
 (add-hook 'prog-mode-hook #'visual-line-mode)
 ;; ---------------------------------------------------------------------------
@@ -103,3 +102,31 @@
   ;; Adjust popup info display width/behavior so it doesn't stretch too far
   (setq corfu-popupinfo-max-width 60
         corfu-popupinfo-min-width 20))
+
+;; ---------------------------------------------------------------------------
+;; Org-roam + Roam UI
+;; ---------------------------------------------------------------------------
+(setq org-roam-directory (file-truename "~/Documents/org/roam/"))
+
+(use-package! websocket
+  :after org-roam)
+
+(use-package! org-roam-ui
+  :after org-roam
+  :config
+  (setq org-roam-ui-sync-theme t
+        org-roam-ui-follow t
+        org-roam-ui-update-on-save t
+        org-roam-ui-open-on-start t))
+
+(defun my/roam-ui-in-emacs ()
+  "Start org-roam-ui and show it inside Emacs."
+  (interactive)
+  (unless (bound-and-true-p org-roam-ui-mode)
+    (org-roam-ui-mode 1))
+  (select-window (split-window-below -15))
+  (xwidget-webkit-browse-url "http://127.0.0.1:35901"))
+
+(map! :leader
+      :desc "Roam UI (browser)"  "n r u" #'org-roam-ui-mode
+      :desc "Roam UI (in Emacs)" "n r U" #'my/roam-ui-in-emacs)
