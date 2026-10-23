@@ -9,7 +9,6 @@
       evtest
       poppler-utils
       jq
-      nh
       nvd
       nil
     ];
