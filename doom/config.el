@@ -108,19 +108,29 @@
 ;; ---------------------------------------------------------------------------
 (setq org-roam-directory (file-truename "~/Documents/org/roam/"))
 
-(use-package! websocket
-  :after org-roam)
-
 (use-package! org-roam-ui
   :after org-roam
   :config
   (setq org-roam-ui-sync-theme t
         org-roam-ui-follow t
         org-roam-ui-update-on-save t
-        org-roam-ui-open-on-start t))
+        org-roam-ui-open-on-start nil
+        org-roam-ui-custom-theme        ; Catppuccin Mocha
+        '((bg      . "#1e1e2e")   ; base
+          (bg-alt  . "#181825")   ; mantle
+          (fg      . "#cdd6f4")   ; text
+          (fg-alt  . "#a6adc8")   ; subtext0
+          (red     . "#f38ba8")
+          (orange  . "#fab387")   ; peach
+          (yellow  . "#f9e2af")
+          (green   . "#a6e3a1")
+          (cyan    . "#94e2d5")   ; teal
+          (blue    . "#89b4fa")
+          (violet  . "#cba6f7")   ; mauve
+          (magenta . "#f5c2e7")))) ; pink
 
 (defun my/roam-ui-in-emacs ()
-  "Start org-roam-ui and show it inside Emacs."
+
   (interactive)
   (unless (bound-and-true-p org-roam-ui-mode)
     (org-roam-ui-mode 1))
@@ -128,5 +138,4 @@
   (xwidget-webkit-browse-url "http://127.0.0.1:35901"))
 
 (map! :leader
-      :desc "Roam UI (browser)"  "n r u" #'org-roam-ui-mode
-      :desc "Roam UI (in Emacs)" "n r U" #'my/roam-ui-in-emacs)
+      :desc "Roam UI (in Emacs)" "n r u" #'my/roam-ui-in-emacs)
