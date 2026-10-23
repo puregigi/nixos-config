@@ -10,6 +10,8 @@
       snapshot
       decibels
       celluloid
+      imagemagick
+      ffmpeg
     ];
   };
 }

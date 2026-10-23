@@ -8,9 +8,10 @@
       doom-theme 'catppuccin)
 
 (setq display-line-numbers-type t
-      org-directory "~/org/"
+      org-directory "~/Documents/org/"
       projectile-project-search-path '("~/Projects/")
       +format-with-lsp nil)
+(setq org-roam-directory (file-truename "~/Documents/org/roam/"))
 
 (add-hook 'prog-mode-hook #'visual-line-mode)
 ;; ---------------------------------------------------------------------------
