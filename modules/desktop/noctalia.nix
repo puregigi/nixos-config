@@ -39,6 +39,7 @@
           layout = "us";
           variant = "intl";
         };
+        clock.enabled = false;
       };
     };
 
@@ -59,7 +60,7 @@
         ];
         serviceConfig = {
           Type = "oneshot";
-          ExecStart = ''${pkgs.procps}/bin/pkill -f -STOP noctalia'';
+          ExecStart = "${pkgs.procps}/bin/pkill -f -STOP noctalia";
         };
       };
       services."noctalia-resume" = {
@@ -75,7 +76,7 @@
         ];
         serviceConfig = {
           Type = "oneshot";
-          ExecStart = ''${pkgs.procps}/bin/pkill -f -CONT noctalia'';
+          ExecStart = "${pkgs.procps}/bin/pkill -f -CONT noctalia";
         };
       };
     };

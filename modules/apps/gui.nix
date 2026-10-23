@@ -6,6 +6,7 @@
       bruno
       nautilus
       onlyoffice-desktopeditors
+      file-roller
     ];
   };
 }
