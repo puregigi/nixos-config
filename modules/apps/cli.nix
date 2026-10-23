@@ -11,6 +11,7 @@
       jq
       nvd
       nil
+      nix-melt
     ];
 
     programs.zoxide.enable = true;
