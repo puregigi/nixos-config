@@ -10,7 +10,7 @@
       interactiveShellInit = ''
         set -g fish_greeting ""
 
-        if status is-interactive
+        if status is-interactive; and not set -q INSIDE_EMACS
             fastfetch
         end
       '';

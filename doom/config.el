@@ -13,6 +13,7 @@
       +format-with-lsp nil)
 
 (add-hook 'prog-mode-hook #'visual-line-mode)
+
 ;; ---------------------------------------------------------------------------
 ;; Shell / environment
 ;; ---------------------------------------------------------------------------
@@ -22,6 +23,12 @@
 (unless (getenv "DOCKER_HOST")
   (when-let ((runtime-dir (getenv "XDG_RUNTIME_DIR")))
     (setenv "DOCKER_HOST" (format "unix://%s/docker.sock" runtime-dir))))
+
+;; ---------------------------------------------------------------------------
+;; Terminal (ghostel)
+;; ---------------------------------------------------------------------------
+(after! ghostel
+  (setq ghostel-module-auto-install 'download))
 
 ;; ---------------------------------------------------------------------------
 ;; HTML + templ
@@ -60,8 +67,6 @@
 ;; Diagnostics / Flycheck
 ;; ---------------------------------------------------------------------------
 (after! flycheck
-  ;; golangci-lint v2 outputs a format incompatible with Flycheck's built-in parser.
-  ;; Completely disable it globally so Eglot/gopls handles project diagnostics instead.
   (customize-set-variable 'flycheck-disabled-checkers
                           (cl-union flycheck-disabled-checkers '(golangci-lint))))
 
@@ -72,6 +77,7 @@
         flycheck-posframe-prefix ""
         flycheck-posframe-position 'point-bottom-left-corner)
   (flycheck-posframe-configure-pretty-defaults))
+
 ;; ---------------------------------------------------------------------------
 ;; Formatting (apheleia; binaries come from the devshell)
 ;; ---------------------------------------------------------------------------
@@ -99,7 +105,6 @@
   (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter))
 
 (after! corfu
-  ;; Adjust popup info display width/behavior so it doesn't stretch too far
   (setq corfu-popupinfo-max-width 60
         corfu-popupinfo-min-width 20))
 
@@ -125,17 +130,23 @@
           (yellow  . "#f9e2af")
           (green   . "#a6e3a1")
           (cyan    . "#94e2d5")   ; teal
-          (blue    . "#89b4fa")
+          (blue    . "#89b4fa")   ; blue
           (violet  . "#cba6f7")   ; mauve
           (magenta . "#f5c2e7")))) ; pink
 
 (defun my/roam-ui-in-emacs ()
-
   (interactive)
-  (unless (bound-and-true-p org-roam-ui-mode)
-    (org-roam-ui-mode 1))
-  (select-window (split-window-below -15))
-  (xwidget-webkit-browse-url "http://127.0.0.1:35901"))
+  (let ((win (seq-find
+              (lambda (w)
+                (with-current-buffer (window-buffer w)
+                  (derived-mode-p 'xwidget-webkit-mode)))
+              (window-list))))
+    (if win
+        (select-window win)
+      (unless (bound-and-true-p org-roam-ui-mode)
+        (org-roam-ui-mode 1))
+      (select-window (split-window-below -15))
+      (xwidget-webkit-browse-url "http://127.0.0.1:35901"))))
 
 (map! :leader
       :desc "Roam UI (in Emacs)" "n r u" #'my/roam-ui-in-emacs)
