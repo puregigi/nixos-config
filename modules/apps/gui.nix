@@ -5,6 +5,7 @@
       anki
       bruno
       nautilus
+      papers
       onlyoffice-desktopeditors
       file-roller
     ];

@@ -10,7 +10,7 @@
         bold_font        auto
         italic_font      auto
         bold_italic_font auto
-        font_size        12
+        font_size        11
 
         modify_font cell_height 94%
         text_composition_strategy legacy
