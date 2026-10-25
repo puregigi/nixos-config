@@ -1,0 +1,316 @@
+config_version = 15
+
+[accessibility]
+ui_scale = 0.95000000670552254
+
+[audio]
+enable_sounds = true
+sound_volume = 0.69999998435378075
+
+[bar]
+order = [ "default" ]
+
+    [bar.default]
+    background_opacity = 0.89999997988343239
+    center = [ "clock", "weather", "date" ]
+    contact_shadow = true
+    end = [ "tray", "privacy", "volume", "notifications", "clipboard", "widget_2", "status", "group:g1", "control-center" ]
+    font_scale = 0.92999998666346073
+    margin_edge = 3
+    margin_ends = 300
+    scale = 0.95000000670552254
+    start = [ "workspaces", "cat_2" ]
+    thickness = 28
+
+        [[bar.default.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        border_width = 1.0
+        enabled = true
+        fill = "surface_variant"
+        id = "g1"
+        members = [ "indicator", "github", "mini-docker" ]
+        opacity = 1.0
+        padding = 6.0
+
+[[control_center.shortcuts]]
+type = "wifi"
+
+[[control_center.shortcuts]]
+type = "detluck/performance-plus:shortcut"
+
+[[control_center.shortcuts]]
+type = "caffeine"
+
+[[control_center.shortcuts]]
+type = "nightlight"
+
+[[control_center.shortcuts]]
+type = "notification"
+
+[[control_center.shortcuts]]
+type = "power_profile"
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = true
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 660.0
+
+[location]
+auto_locate = true
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [ "lockscreen-login-box@WL-1", "lockscreen-login-box@HDMI-A-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = false
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@WL-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 468.0
+    cy = 832.0
+    output = "WL-1"
+    placement_height = 1014.0
+    placement_width = 936.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@WL-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[nightlight]
+enabled = true
+
+[notification]
+background_opacity = 0.9499999787658453
+scale = 0.95000000670552254
+
+[osd]
+background_opacity = 0.9499999787658453
+
+[plugin_settings."8bury/mini-docker"]
+manager_placement = "attached"
+
+[plugin_settings."alexander/game-launcher"]
+browser_placement = "attached"
+
+[plugin_settings."aristides/udiskie"]
+auto_open_filemanager = true
+file_manager_cmd = "nautilus"
+manager_open_near_click = true
+manager_placement = "attached"
+
+[plugin_settings."rxtsel/portctl"]
+hide_unknown_ports = true
+ignore_list = "steam,spotify"
+panel_placement = "attached"
+
+[plugin_settings."thepunkoff/pomodoro"]
+auto-start-breaks = true
+auto-start-work = true
+long-break-duration = 20
+short-break-duration = 10
+use-bundled-alarm-sound = true
+work-duration = 1
+
+[plugins]
+enabled = [
+    "yuuto/calculator",
+    "noctalia/bongocat",
+    "8bury/mini-docker",
+    "rxtsel/portctl",
+    "thepunkoff/pomodoro",
+    "noctalia/kaomoji",
+    "alexander/game-launcher",
+    "aristides/udiskie",
+    "detluck/performance-plus",
+    "shangshui0302/github-kanban",
+    "ashur-d/wallpaper-widget"
+]
+
+[shell]
+avatar_path = "/home/gigi/Pictures/Art&Pictures/pfpclose.png"
+font_family = "Maple Mono"
+settings_window_translucent = true
+
+    [shell.greeter_sync]
+    auto_sync = true
+
+    [shell.launcher]
+    category_icons_only = true
+    show_icons = false
+
+    [shell.panel]
+    clipboard_placement = "attached"
+    open_near_click_clipboard = true
+    transparency_mode = "glass"
+
+    [shell.screen_corners]
+    enabled = true
+
+    [shell.screenshot]
+    annotate = true
+    directory = "/home/gigi/Pictures/Screenshots"
+
+    [shell.session]
+    show_shortcuts = false
+
+[theme]
+builtin = "Catppuccin"
+community_palette = "Catppuccin Mocha Pink"
+mode = "dark"
+source = "builtin"
+wallpaper_scheme = "m3-content"
+
+    [theme.templates]
+    builtin_ids = [ "btop", "gtk3", "gtk4", "kitty", "qt", "umbriel" ]
+    community_ids = [ "zen-browser", "obs", "superfile" ]
+
+[wallpaper]
+directory = "/home/gigi/Pictures/Wallpapers"
+enabled = true
+transition_on_startup = true
+
+    [wallpaper.default]
+    path = "/home/gigi/Pictures/Wallpapers/magick_kitty_wall_base.jpg"
+
+    [wallpaper.last]
+    path = "/home/gigi/Pictures/Wallpapers/magick_kitty_wall_base.jpg"
+
+    [wallpaper.monitors.HDMI-A-1]
+    path = "/home/gigi/Pictures/Wallpapers/magick_kitty_wall_base.jpg"
+
+    [[wallpaper.favorite]]
+    builtin_palette = "Catppuccin"
+    palette_source = "builtin"
+    path = "/home/gigi/Pictures/Wallpapers/magick_kitty_wall_base.jpg"
+    theme_mode = "dark"
+
+[widget.audio_visualizer]
+interactive = false
+
+[widget.cat]
+color = "primary"
+type = "noctalia/bongocat:cat"
+
+[widget.cat_2]
+color = "primary"
+input_devices = [ "/dev/input/by-id/usb-Logitech_USB_Receiver-event-kbd" ]
+scale = 1.55
+type = "noctalia/bongocat:cat"
+
+[widget.clock]
+interactive = false
+
+[widget.control-center]
+capsule = true
+capsule_padding = 4
+color = "primary"
+
+[widget.date]
+format = "{:%a %d}"
+
+[widget.github]
+type = "shangshui0302/github-kanban:github"
+
+[widget.indicator]
+type = "rxtsel/portctl:indicator"
+
+[widget.media]
+hide_when_no_media = true
+
+[widget.mini-docker]
+type = "8bury/mini-docker:mini-docker"
+
+[widget.privacy]
+hide_inactive = true
+
+[widget.status]
+hide_when_empty = true
+type = "aristides/udiskie:status"
+
+[widget.sysmon]
+show_value = false
+
+[widget.tray]
+capsule = true
+capsule_padding = 3
+color = "primary"
+drawer = true
+hide_passive = false
+pinned = [ "nixdatifier" ]
+
+[widget.volume]
+show_label = false
+
+[widget.weather]
+anchor = true
+color = "primary"
+scale = 1.05
+show_condition = false
+show_temperature = false
+
+[widget.widget_2]
+type = "thepunkoff/pomodoro:widget"
+
+[widget.workspaces]
+capsule = true
+labels_only_when_occupied = true
