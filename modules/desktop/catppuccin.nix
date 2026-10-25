@@ -19,6 +19,7 @@ in
     catppuccin = {
       enable = true;
       autoEnable = true;
+      cursors.enable = true;
       inherit flavor accent;
     };
   };

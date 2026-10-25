@@ -1,6 +1,6 @@
 {
   flake.modules.homeManager.gtk =
-    { pkgs, ... }:
+    { config, pkgs, ... }:
     let
       adwaita-colors = pkgs.stdenvNoCC.mkDerivation {
         pname = "adwaita-colors-icon-theme";
@@ -47,17 +47,16 @@
       };
     in
     {
+      # package and name now come from catppuccin-nix
       home.pointerCursor = {
         enable = true;
-        package = pkgs.catppuccin-cursors.mochaMauve;
-        name = "catppuccin-mocha-mauve-cursors";
         size = 24;
         gtk.enable = true;
       };
 
       dconf.settings = {
         "org/gnome/desktop/interface" = {
-          cursor-theme = "catppuccin-mocha-mauve-cursors";
+          cursor-theme = config.home.pointerCursor.name;
           cursor-size = 24;
           icon-theme = "Adwaita-mauve";
         };
@@ -67,7 +66,6 @@
         adw-gtk3
         adwaita-icon-theme
         adwaita-icon-theme-legacy
-        catppuccin-cursors.mochaMauve
         adwaita-colors
       ];
     };
