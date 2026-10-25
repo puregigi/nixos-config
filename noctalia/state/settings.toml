@@ -33,24 +33,6 @@ order = [ "default" ]
         opacity = 1.0
         padding = 6.0
 
-[[control_center.shortcuts]]
-type = "wifi"
-
-[[control_center.shortcuts]]
-type = "detluck/performance-plus:shortcut"
-
-[[control_center.shortcuts]]
-type = "caffeine"
-
-[[control_center.shortcuts]]
-type = "nightlight"
-
-[[control_center.shortcuts]]
-type = "notification"
-
-[[control_center.shortcuts]]
-type = "power_profile"
-
 [idle]
 behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
 
@@ -181,7 +163,6 @@ enabled = [
     "noctalia/kaomoji",
     "alexander/game-launcher",
     "aristides/udiskie",
-    "detluck/performance-plus",
     "shangshui0302/github-kanban",
     "ashur-d/wallpaper-widget"
 ]
