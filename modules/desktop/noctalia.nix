@@ -82,7 +82,13 @@
     };
   };
 
-  flake.modules.homeManager.noctalia = { pkgs, ... }: {
+  flake.modules.homeManager.noctalia = { config, pkgs, ... }:
+  let
+    # live symlink into the repo, edits apply without a rebuild
+    link = path:
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nixos/${path}";
+  in
+  {
     home.packages = with pkgs; [
       xwayland-satellite
       wl-clipboard
@@ -90,5 +96,8 @@
       brightnessctl
       ddcutil
     ];
+
+    xdg.configFile."noctalia/config.toml".source = link "noctalia/config.toml";
+    xdg.configFile."umbriel/config.toml".source = link "umbriel/config.toml";
   };
 }

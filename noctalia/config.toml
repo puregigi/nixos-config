@@ -1,0 +1,13 @@
+[shell]
+polkit_agent = true
+
+[shell.screenshot]
+save_to_file = true
+directory = "/home/gigi/Pictures/Screenshots/"
+filename_pattern = "screenshot_%Y%m%d_%H%M%S"
+copy_to_clipboard = true
+
+[notification.filter.pomodoro]
+match = "noctalia"
+match_content = "Pomodoro Timer"
+play_sound = false
