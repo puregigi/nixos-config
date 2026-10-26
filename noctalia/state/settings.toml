@@ -203,7 +203,7 @@ wallpaper_scheme = "m3-content"
 
     [theme.templates]
     builtin_ids = [ "btop", "gtk3", "gtk4", "kitty", "qt", "umbriel" ]
-    community_ids = [ "zen-browser", "obs" ]
+    community_ids = [ "zen-browser", "obs", "zathura" ]
 
 [wallpaper]
 directory = "/home/gigi/Pictures/Wallpapers"

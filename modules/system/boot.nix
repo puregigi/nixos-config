@@ -8,6 +8,5 @@
       "vt.global_cursor_default=0"
     ];
     boot.consoleLogLevel = 3;
-    boot.initrd.verbose = false;
   };
 }
