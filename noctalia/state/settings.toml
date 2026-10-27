@@ -1,4 +1,4 @@
-config_version = 15
+config_version = 16
 
 [accessibility]
 ui_scale = 0.95000000670552254
@@ -27,7 +27,7 @@ order = [ "default" ]
         accordion_direction = "end"
         border_width = 1.0
         enabled = true
-        fill = "surface_variant"
+        fill = "surface_container"
         id = "g1"
         members = [ "indicator", "github", "mini-docker" ]
         opacity = 1.0
@@ -76,7 +76,7 @@ widget_order = [ "lockscreen-login-box@WL-1", "lockscreen-login-box@HDMI-A-1" ]
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -103,7 +103,7 @@ widget_order = [ "lockscreen-login-box@WL-1", "lockscreen-login-box@HDMI-A-1" ]
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@WL-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -203,7 +203,7 @@ wallpaper_scheme = "m3-content"
 
     [theme.templates]
     builtin_ids = [ "btop", "gtk3", "gtk4", "kitty", "qt", "umbriel" ]
-    community_ids = [ "zen-browser", "obs", "zathura" ]
+    community_ids = [ "zen-browser", "obs", "zathura", "yazi" ]
 
 [wallpaper]
 directory = "/home/gigi/Pictures/Wallpapers"
