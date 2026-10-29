@@ -22,32 +22,25 @@
   "modules": [
     "break",
     {
-      "type": "custom",
-      "format": "{##cba6f7}\uf313 GIGI {##6e738d}── {##b4befe}NIXOS CATPPUCCIN EDITION"
+      "type": "title",
+      "format": "{##cba6f7}{user-name}{##6e738d}@{##cba6f7}{host-name} {##6e738d}── {##b4befe}CATPPUCCIN MOCHA FLAVOR"
     },
     "break",
-
-    {
-      "type": "title",
-      "key": "\uf007 user ",
-      "keyColor": "#c6a0f6",
-      "format": "{##b7bdf8}{user-name}{##6e738d}@{##b7bdf8}{host-name}"
-    },
     {
       "type": "os",
-      "key": "\uf313 os   ",
+      "key": "  \uf313 os   ",
       "keyColor": "#c6a0f6",
       "format": "{name}"
     },
     {
       "type": "kernel",
-      "key": "\uf17c krnl ",
+      "key": "  \uf17c krnl ",
       "keyColor": "#c6a0f6",
       "format": "{sysname} {release}"
     },
     {
       "type": "uptime",
-      "key": "\uf017 time ",
+      "key": "  \uf017 time ",
       "keyColor": "#c6a0f6",
       "format": "{?days}{days}d {?}{hours}h {minutes}m"
     },
@@ -55,19 +48,19 @@
 
     {
       "type": "wm",
-      "key": "\uf2d0 wm   ",
+      "key": "  \uf2d0 wm   ",
       "keyColor": "#b7bdf8",
       "format": "{pretty-name}"
     },
     {
       "type": "shell",
-      "key": "\uf120 sh   ",
+      "key": "  \uf120 sh   ",
       "keyColor": "#b7bdf8",
       "format": "{pretty-name}"
     },
     {
       "type": "terminal",
-      "key": "\uf489 term ",
+      "key": "  \uf489 term ",
       "keyColor": "#b7bdf8",
       "format": "{pretty-name}"
     },
@@ -75,24 +68,24 @@
 
     {
       "type": "cpu",
-      "key": "\uf2db cpu  ",
+      "key": "  \uf2db cpu  ",
       "keyColor": "#7dc4e4"
     },
     {
       "type": "gpu",
-      "key": "\uf108 gpu  ",
+      "key": "  \uf108 gpu  ",
       "keyColor": "#7dc4e4",
       "format": "{name}"
     },
     {
       "type": "memory",
-      "key": "\udb80\udf5b ram  ",
+      "key": "  \udb80\udf5b ram  ",
       "keyColor": "#91d7e3",
       "format": "{used} / {total} ({percentage})"
     },
     {
       "type": "disk",
-      "key": "\uf0a0 disk ",
+      "key": "  \uf0a0 disk ",
       "keyColor": "#91d7e3",
       "format": "{size-used} / {size-total} ({size-percentage}) - {filesystem}"
     },
