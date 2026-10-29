@@ -6,6 +6,7 @@
       bruno
       nautilus
       papers
+      krita
       onlyoffice-desktopeditors
       file-roller
     ];
