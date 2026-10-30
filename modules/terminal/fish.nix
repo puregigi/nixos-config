@@ -4,7 +4,6 @@
   };
 
   flake.modules.homeManager.fish = { ... }: {
-    programs.fastfetch.enable = true;
     programs.fish = {
       enable = true;
       interactiveShellInit = ''

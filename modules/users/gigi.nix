@@ -10,8 +10,13 @@ in
       isNormalUser = true;
       description = "gigi";
       shell = pkgs.fish;
-      extraGroups = [ "networkmanager" "wheel" "input" ];
-      packages = with pkgs; [];
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+        "input"
+        "i2c"
+      ];
+      packages = with pkgs; [ ];
     };
 
     home-manager = {

@@ -9,6 +9,7 @@
       clang
       cmake
       gnumake
+      languagetool
       (aspellWithDicts (d: [
         d.en
         d.pt_BR
