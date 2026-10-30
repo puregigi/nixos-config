@@ -44,7 +44,7 @@
     };
 
     # Pause shell while the machine sleeps - temp fix for Umbriel (wlroots)
-    # based on Multi-Process Service (MPS) https://wiki.nixos.org/wiki/Nvidia
+    # based on https://wiki.nixos.org/wiki/NVIDIA#Graphical_corruption_and_system_crashes_on_suspend/resume
     systemd = {
       services."noctalia-suspend" = {
         description = "suspend noctalia";

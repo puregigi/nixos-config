@@ -81,20 +81,20 @@ follows_mouse = true
 [keybinds]
 
 # Applications and session
-"Mod+Return" = { action = "spawn:kitty", repeat = false }
-"Mod+Ctrl+Return" = "spawn:noctalia msg panel-toggle launcher"
+"Mod+Return" = { action = "spawn kitty", repeat = false }
+"Mod+Ctrl+Return" = "spawn noctalia msg panel-toggle launcher"
 "Mod+Q" = { action = "window-close", repeat = false }
 "Mod+Escape" = "session-quit"
 "Mod+Shift+Escape" = { action = "shortcuts-inhibit-toggle", allow_when_inhibited = true, repeat = false }
 
 #My Apps keybinds config
-"Mod+B" = "spawn:zen-beta"
-"Mod+G" = "spawn:steam"
-"Mod+E" = "spawn:kitty -e yazi"
-"Mod+X" = "spawn:emacs"
-"Mod+W" = "spawn:noctalia msg panel-toggle ashur-d/wallpaper-widget:hub"
-"Mod+Shift+S" = "spawn:noctalia msg screenshot-region"
-"Mod+Shift+C" = "spawn:noctalia msg panel-toggle yuuto/calculator:panel"
+"Mod+B" = "spawn zen-beta"
+"Mod+G" = "spawn steam"
+"Mod+E" = "spawn kitty -e yazi"
+"Mod+X" = "spawn emacs"
+"Mod+W" = "spawn noctalia msg panel-toggle ashur-d/wallpaper-widget:hub"
+"Mod+Shift+S" = "spawn noctalia msg screenshot-region"
+"Mod+Shift+C" = "spawn noctalia msg panel-toggle yuuto/calculator:panel"
 
 # Focus and movement
 "Mod+Left" = "window-focus-left"
@@ -123,30 +123,30 @@ follows_mouse = true
 "Mod+Comma" = "window-consume-or-expel-left"
 "Mod+Period" = "window-consume-or-expel-right"
 "Mod+O" = { action = "overview-toggle", repeat = false }
-"Mod+Minus" = "window-modify-width-right:-0.09"
-"Mod+equal" = "window-modify-width-right:+0.09"
-"Mod+Ctrl+Minus" = "window-modify-height-up:-0.1"
-"Mod+Ctrl+equal" = "window-modify-height-up:+0.1"
+"Mod+Minus" = "window-modify-width-right -0.09"
+"Mod+equal" = "window-modify-width-right +0.09"
+"Mod+Ctrl+Minus" = "window-modify-height-up -0.1"
+"Mod+Ctrl+equal" = "window-modify-height-up +0.1"
 
 # Workspaces
-"Mod+1" = "workspace-switch:1"
-"Mod+2" = "workspace-switch:2"
-"Mod+3" = "workspace-switch:3"
-"Mod+4" = "workspace-switch:4"
-"Mod+5" = "workspace-switch:5"
-"Mod+6" = "workspace-switch:6"
-"Mod+7" = "workspace-switch:7"
-"Mod+8" = "workspace-switch:8"
-"Mod+9" = "workspace-switch:9"
-"Mod+Shift+1" = "window-move-to-workspace:1"
-"Mod+Shift+2" = "window-move-to-workspace:2"
-"Mod+Shift+3" = "window-move-to-workspace:3"
-"Mod+Shift+4" = "window-move-to-workspace:4"
-"Mod+Shift+5" = "window-move-to-workspace:5"
-"Mod+Shift+6" = "window-move-to-workspace:6"
-"Mod+Shift+7" = "window-move-to-workspace:7"
-"Mod+Shift+8" = "window-move-to-workspace:8"
-"Mod+Shift+9" = "window-move-to-workspace:9"
+"Mod+1" = "workspace-switch 1"
+"Mod+2" = "workspace-switch 2"
+"Mod+3" = "workspace-switch 3"
+"Mod+4" = "workspace-switch 4"
+"Mod+5" = "workspace-switch 5"
+"Mod+6" = "workspace-switch 6"
+"Mod+7" = "workspace-switch 7"
+"Mod+8" = "workspace-switch 8"
+"Mod+9" = "workspace-switch 9"
+"Mod+Shift+1" = "window-move-to-workspace 1"
+"Mod+Shift+2" = "window-move-to-workspace 2"
+"Mod+Shift+3" = "window-move-to-workspace 3"
+"Mod+Shift+4" = "window-move-to-workspace 4"
+"Mod+Shift+5" = "window-move-to-workspace 5"
+"Mod+Shift+6" = "window-move-to-workspace 6"
+"Mod+Shift+7" = "window-move-to-workspace 7"
+"Mod+Shift+8" = "window-move-to-workspace 8"
+"Mod+Shift+9" = "window-move-to-workspace 9"
 "Mod+WheelUp" = "workspace-previous"
 "Mod+WheelDown" = "workspace-next"
 "Mod+Ctrl+WheelUp" = "column-move-to-workspace-previous"
@@ -159,15 +159,15 @@ follows_mouse = true
 "Mod+Tab" = "scratchpad-focus-next"
 
 # Brightness and Volume
-"XF86AudioRaiseVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-"XF86AudioLowerVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-"XF86AudioMute"        = "spawn:wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-"XF86AudioMicMute" = "spawn:wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
-"XF86AudioPlay" = "spawn:playerctl play-pause"
-"XF86AudioNext" = "spawn:playerctl next"
-"XF86AudioPrev" = "spawn:playerctl previous"
-"XF86MonBrightnessUp" = "spawn:brightnessctl set +5%"
-"XF86MonBrightnessDown" = "spawn:brightnessctl set 5%-"
+"XF86AudioRaiseVolume" = "spawn wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+"XF86AudioLowerVolume" = "spawn wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+"XF86AudioMute"        = "spawn wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+"XF86AudioMicMute" = "spawn wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+"XF86AudioPlay" = "spawn playerctl play-pause"
+"XF86AudioNext" = "spawn playerctl next"
+"XF86AudioPrev" = "spawn playerctl previous"
+"XF86MonBrightnessUp" = "spawn brightnessctl set +5%"
+"XF86MonBrightnessDown" = "spawn brightnessctl set 5%-"
 
 # ==============================================================================
 # Layout
